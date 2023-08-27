@@ -1,4 +1,5 @@
 from kivy.app import App
+from kivy.clock import Clock
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.label import Label
 from kivy.uix.screenmanager import ScreenManager, Screen
@@ -13,6 +14,7 @@ class Screen1(Screen):
 
         my_app.db = db_init(username)
         my_app.messages.display_messages()
+        Clock.schedule_interval(my_app.messages.display_messages, 5)
 
 
 class Screen2(Screen):
@@ -33,7 +35,7 @@ class Messages(BoxLayout):
         super(Messages, self).__init__(**kwargs)
         my_app.messages = self
 
-    def display_messages(self):
+    def display_messages(self, dt=5):
         messages = my_app.db.get_messages_in_order()
         print(messages)
 
