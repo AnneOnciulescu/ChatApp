@@ -66,7 +66,7 @@ class TheChatApp(App):
 
 
 def db_init(username):
-    db_str = 'add db string'
+    db_str = 'nu vorbim urat'
 
     data_base = DBConnection(db_str, username)
     return data_base
