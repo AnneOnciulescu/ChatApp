@@ -42,12 +42,18 @@ class Messages(BoxLayout):
         self.clear_widgets()
 
         for message in messages:
-            l = MessageLabel()
+            if message['user'] == "User1":
+                l = MessageLabel()
+            else:
+                l = MessageLabel2()
             l.text = message['user'] + ': ' + message["message"]
             self.add_widget(l)
 
 
 class MessageLabel(Label):
+    pass
+
+class MessageLabel2(Label):
     pass
 
 
@@ -60,7 +66,7 @@ class TheChatApp(App):
 
 
 def db_init(username):
-    db_str = 'Add DB Str'
+    db_str = 'mongodb+srv://Robert_21:Fortissimo21@cluster0.dpcld9q.mongodb.net/?retryWrites=true&w=majority'
 
     data_base = DBConnection(db_str, username)
     return data_base
