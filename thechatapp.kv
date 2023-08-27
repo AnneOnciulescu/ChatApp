@@ -42,6 +42,8 @@ ScreenManager:
                 id: my_text_input
                 orientation: "vertical"
 
+                multiline: False
+                on_text_validate: root.on_button_press(my_text_input)
                 size_hint: (0.85, None)
                 height: "60dp"
                 pos_hint: {"x": 0, "y": 0}

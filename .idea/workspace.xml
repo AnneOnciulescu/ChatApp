@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce35d763-6c0b-4ce0-83ee-76dbc5d443d2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/MongoDB.py" beforeDir="false" afterPath="$PROJECT_DIR$/MongoDB.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/thechatapp.kv" beforeDir="false" afterPath="$PROJECT_DIR$/thechatapp.kv" afterDir="false" />
     </list>
