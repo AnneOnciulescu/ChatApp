@@ -14,7 +14,7 @@ class Screen1(Screen):
 
         my_app.db = db_init(username)
         my_app.messages.display_messages()
-        Clock.schedule_interval(my_app.messages.display_messages, 5)
+        Clock.schedule_interval(my_app.messages.display_messages, 3)
 
 
 class Screen2(Screen):
@@ -35,7 +35,7 @@ class Messages(BoxLayout):
         super(Messages, self).__init__(**kwargs)
         my_app.messages = self
 
-    def display_messages(self, dt=5):
+    def display_messages(self, dt=3):
         messages = my_app.db.get_messages_in_order()
         print(messages)
 
@@ -66,7 +66,7 @@ class TheChatApp(App):
 
 
 def db_init(username):
-    db_str = 'nu vorbim urat'
+    db_str = 'meow'
 
     data_base = DBConnection(db_str, username)
     return data_base
