@@ -77,3 +77,18 @@ ScreenManager:
     text: ''
     font_size: "16sp"
     padding: 20, 20
+
+<MessageLabel2>:
+    canvas.before:
+        Color:
+            rgba: (0.1, 0.5, 100, 1)
+        RoundedRectangle:
+            radius:[20]
+            pos: self.pos
+            size: self.size
+    size_hint_y: None
+    height: self.texture_size[1]
+    text_size: self.width, None
+    text: ''
+    font_size: "16sp"
+    padding: 20, 20
