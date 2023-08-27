@@ -1,0 +1,79 @@
+ScreenManager:
+
+<ScreenManager>:
+    Screen1:
+    Screen2:
+
+<Screen1>:
+    name: 'screen1'
+    BoxLayout:
+        orientation: 'vertical'
+        Button:
+            text: 'User1'
+            on_press: root.on_button_press(self)
+        Button:
+            text: 'User2'
+            on_press: root.on_button_press(self)
+
+<Screen2>:
+    name: 'screen2'
+    BoxLayout:
+        id: box_layout_1
+        orientation: "vertical"
+
+        ScrollView:
+            id: scroll_view
+            canvas.before:
+                Color:
+                    rgba: 0, 77/255, 26/255, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+            Messages:
+
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint: (1, None)
+            height: "60dp"
+            pos_hint: {"x": 0, "y": 0}
+
+            TextInput:
+                id: my_text_input
+                orientation: "vertical"
+
+                size_hint: (0.85, None)
+                height: "60dp"
+                pos_hint: {"x": 0, "y": 0}
+
+            Button:
+                id: my_send_button
+                orientation: "vertical"
+                size_hint: (0.15, None)
+                height: "60dp"
+                pos_hint: {"x": 0.85, "y": 0}
+                on_press: root.on_button_press(my_text_input)
+
+                background_normal: 'img_2.png'
+
+<Messages>:
+    id: messages
+    size_hint: (1, None)
+    height: self.minimum_height
+    orientation: "vertical"
+    spacing: '10dp'
+
+<MessageLabel>:
+    canvas.before:
+        Color:
+            rgba: (0.1, 0.5, 0.1, 1)
+        RoundedRectangle:
+            radius:[20]
+            pos: self.pos
+            size: self.size
+    size_hint_y: None
+    height: self.texture_size[1]
+    text_size: self.width, None
+    text: ''
+    font_size: "16sp"
+    padding: 20, 20
