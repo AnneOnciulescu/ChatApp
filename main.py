@@ -66,7 +66,7 @@ class TheChatApp(App):
 
 
 def db_init(username):
-    db_str = 'mongodb+srv://Robert_21:Fortissimo21@cluster0.dpcld9q.mongodb.net/?retryWrites=true&w=majority'
+    db_str = ''
 
     data_base = DBConnection(db_str, username)
     return data_base
