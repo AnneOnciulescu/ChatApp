@@ -13,8 +13,10 @@ class Screen1(Screen):
         username = widget.text
 
         my_app.db = db_init(username)
-        my_app.messages.display_messages()
-        Clock.schedule_interval(my_app.messages.display_messages, 3)
+        my_app.messages.display_messages(my_app.db.get_recent_messages())
+
+        my_app.db.detect_changes()
+        Clock.schedule_interval(lambda dt: my_app.messages.display_messages(my_app.db.get_new_messages()), 1)
 
 
 class Screen2(Screen):
@@ -24,10 +26,9 @@ class Screen2(Screen):
     def on_button_press(self, txt_input):
         print(txt_input.text)
         my_app.db.send_message(txt_input.text)
-        my_app.messages.display_messages()
-        self.ids.scroll_view.scroll_y = 0
 
         txt_input.text = ''
+        txt_input.text_validate_unfocus = False
 
 
 class Messages(BoxLayout):
@@ -35,23 +36,22 @@ class Messages(BoxLayout):
         super(Messages, self).__init__(**kwargs)
         my_app.messages = self
 
-    def display_messages(self, dt=3):
-        messages = my_app.db.get_messages_in_order()
-        print(messages)
+    def display_messages(self, messages):
+        if messages:
+            for message in messages:
+                if message['user'] == my_app.db.username:
+                    label = MessageLabel1()
+                else:
+                    label = MessageLabel2()
+                label.text = message['user'] + ': ' + message["message"]
+                self.add_widget(label)
 
-        self.clear_widgets()
-
-        for message in messages:
-            if message['user'] == "User1":
-                l = MessageLabel()
-            else:
-                l = MessageLabel2()
-            l.text = message['user'] + ': ' + message["message"]
-            self.add_widget(l)
+            self.parent.scroll_y = 0
 
 
-class MessageLabel(Label):
+class MessageLabel1(Label):
     pass
+
 
 class MessageLabel2(Label):
     pass
@@ -66,7 +66,7 @@ class TheChatApp(App):
 
 
 def db_init(username):
-    db_str = 'meow'
+    db_str = 'mongodb+srv://Robert_21:Fortissimo21@cluster0.dpcld9q.mongodb.net/?retryWrites=true&w=majority'
 
     data_base = DBConnection(db_str, username)
     return data_base
