@@ -11,6 +11,7 @@ class DBConnection:
 
         self.messages_list = []
         self.thread_list = []
+        self.mutex = threading.Lock()
 
         client = MongoClient(connection_str)
         self.mongo_db = client['ChatApp']
@@ -28,7 +29,9 @@ class DBConnection:
         with collection.watch() as stream:
             for change in stream:
                 # print("Change detected:", change)
+                self.mutex.acquire()
                 self.messages_list.append(change['fullDocument'])
+                self.mutex.release()
 
     def send_message(self, message):
         now = datetime.now()
