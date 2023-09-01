@@ -4,8 +4,7 @@ from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.label import Label
 from kivy.uix.screenmanager import ScreenManager, Screen
 
-from MongoDB import DBConnection
-
+from MyDB import DBConnection
 
 class Screen1(Screen):
     def on_button_press(self, widget):
@@ -13,9 +12,8 @@ class Screen1(Screen):
         username = widget.text
 
         my_app.db = db_init(username)
-        my_app.messages.display_messages(my_app.db.get_recent_messages())
+        # my_app.messages.display_messages(my_app.db.get_recent_messages())
 
-        my_app.db.detect_changes()
         Clock.schedule_interval(lambda dt: my_app.messages.display_messages(my_app.db.get_new_messages()), 1)
 
 
@@ -25,7 +23,7 @@ class Screen2(Screen):
 
     def on_button_press(self, txt_input):
         print(txt_input.text)
-        my_app.db.send_message(txt_input.text)
+        my_app.db.create_message(txt_input.text)
 
         txt_input.text = ''
         txt_input.text_validate_unfocus = False
@@ -66,9 +64,7 @@ class TheChatApp(App):
 
 
 def db_init(username):
-    db_str = ''
-
-    data_base = DBConnection(db_str, username)
+    data_base = DBConnection(username)
     return data_base
 
 
