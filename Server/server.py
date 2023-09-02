@@ -20,6 +20,7 @@ while True:
     for sock in readable:
         if sock == server:
 
+            print("ceva")
             client_socket, client_address = server.accept()
             client_socket.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1)
 

@@ -13,7 +13,7 @@ class DBConnection:
 
         self.condition_send = threading.Condition()
 
-        HOST = '192.168.0.123'
+        HOST = '82.210.153.205'
         PORT = 8080
 
         self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -45,10 +45,12 @@ class DBConnection:
             self.message_recv = self.socket.recv(1024)
             if not self.message_recv:
                 break
-            messages_list = [item.strip() for item in self.message_recv.decode('utf-8').split('\n####\n') if item.strip()]
 
-            for message in messages_list:
-                self.messages.append(message)
+            if self.message_recv != 'None':
+                messages_list = [item.strip() for item in self.message_recv.decode('utf-8').split('\n####\n') if item.strip()]
+
+                for message in messages_list:
+                    self.messages.append(message)
             print(f"Received: {self.message_recv}")
 
 
