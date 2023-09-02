@@ -9,6 +9,9 @@ class DBConnection:
         self.message_send = ''
         self.message_recv = ''
 
+        self.end_str = '\n###END###\n'
+        self.bound_str = '\n###\n'
+
         self.messages = []
 
         self.condition_send = threading.Condition()
@@ -35,19 +38,33 @@ class DBConnection:
                 if not self.message_send:
                     self.condition_send.wait()
 
+            self.message_send += self.end_str
             self.socket.sendall(self.message_send.encode('utf-8'))
             print(f"Send: {self.message_send}")
             self.message_send = ''
 
 
+    def recv_all(self):
+        buff = ''
+
+        while True:
+            data = self.socket.recv(1024).decode('utf-8')
+
+            if not data:
+                break
+
+            buff += data
+            if buff.endswith(self.end_str):
+                return buff
+
     def recv_message(self):
         while True:
-            self.message_recv = self.socket.recv(1024)
+            self.message_recv = self.recv_all()[:-len(self.end_str)]
             if not self.message_recv:
                 break
 
             if self.message_recv != 'None':
-                messages_list = [item.strip() for item in self.message_recv.decode('utf-8').split('\n####\n') if item.strip()]
+                messages_list = [item.strip() for item in self.message_recv.split(self.bound_str) if item.strip()]
 
                 for message in messages_list:
                     self.messages.append(message)
