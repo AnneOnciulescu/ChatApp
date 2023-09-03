@@ -5,8 +5,7 @@ import json
 from key_gen import Key
 
 class DBConnection:
-    def __init__(self, username, password_code='12345'):
-        self.username = username
+    def __init__(self):
         self.message_send = ''
         self.message_recv = ''
 
@@ -18,22 +17,34 @@ class DBConnection:
         self.condition_send = threading.Condition()
         self.keys = Key()
 
-        HOST = '82.210.153.205'
-        PORT = 9000
+        self.HOST = '82.210.153.205'
+        self.PORT = 9000
+
+    def login(self, username, password_code):
+        self.username = username
+        self.password_code = password_code
 
         self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        self.socket.connect((HOST, PORT))
+        self.socket.connect((self.HOST, self.PORT))
 
         public_key_format = self.keys.public_pem.decode('utf-8') + self.end_str
         print(public_key_format)
         self.socket.sendall(public_key_format.encode('utf-8'))
 
-        server_public_key = self.recv_all()[:-len(self.end_str)]
-        print(server_public_key)
+        self.server_public_key = self.recv_all()[:-len(self.end_str)]
+        print(self.server_public_key)
 
-        encr_user_data = self.keys.encrypt(f"{self.username}: {password_code}", server_public_key) + self.end_str
+        encr_user_data = self.keys.encrypt(f"{self.username}: {password_code}", self.server_public_key) + self.end_str
         self.socket.sendall(encr_user_data.encode('utf-8'))
 
+        status_encr = self.recv_all()[:-len(self.end_str)]
+        status = self.keys.decrypt(status_encr)
+        print(status)
+
+        return status == 'OK'
+        
+
+    def start_messages(self):
         send_thread = threading.Thread(target=self.send_message)
         recv_thread = threading.Thread(target=self.recv_message)
 
@@ -50,8 +61,11 @@ class DBConnection:
                 if not self.message_send:
                     self.condition_send.wait()
 
-            self.message_send += self.end_str
-            self.socket.sendall(self.message_send.encode('utf-8'))
+            message_encr = self.keys.encrypt(self.message_send, self.server_public_key)
+            message_encr += self.end_str
+
+            self.socket.sendall(message_encr.encode('utf-8'))
+
             print(f"Send: {self.message_send}")
             self.message_send = ''
 
@@ -77,12 +91,15 @@ class DBConnection:
                 break
             
             self.message_recv = self.message_recv[:-len(self.end_str)]
-            if self.message_recv != 'None':
-                messages_list = [item.strip() for item in self.message_recv.split(self.bound_str) if item.strip()]
+            message_dec = self.keys.decrypt(self.message_recv)
+            print(message_dec)
+
+            if message_dec != 'None':
+                messages_list = [item.strip() for item in message_dec.split(self.bound_str) if item.strip()]
 
                 for message in messages_list:
                     self.messages.append(message)
-            print(f"Received: {self.message_recv}")
+            print(f"Received: {messages_list}")
 
 
     def get_new_messages(self):

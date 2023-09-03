@@ -35,7 +35,9 @@ class Key:
         except:
             raise ValueError('Wrong key format')
         
-    def decrypt(self, data):
+    def decrypt(self, text):
+        data = base64.b64decode(text.encode('utf-8'))
+        
         plaintext = self.private_key.decrypt(
             data,
             padding.OAEP(

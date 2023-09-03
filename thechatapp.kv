@@ -3,6 +3,7 @@ ScreenManager:
 <ScreenManager>:
     Screen1:
     Screen2:
+    Screen3:
 
 <Screen1>:
     name: 'screen1'
@@ -17,15 +18,17 @@ ScreenManager:
             orientation: "vertical"
 
             multiline: False
-            on_text_validate:
+            on_text_validate: root.on_username_send_button_press(self)
             size_hint: (1, 0.15)
 
         Button:
             text: 'Send'
-            on_press: root.on_button_press(self)
+            on_press: root.on_username_send_button_press(text_input_1)
             size_hint: (1, 0.15)
         
         NumericalKeyboard:
+            id: numerical_keyboard
+            disabled: True
 
 <Screen2>:
     name: 'screen2'
@@ -69,6 +72,11 @@ ScreenManager:
                 on_press: root.on_button_press(text_input)
 
                 background_normal: 'img_2.png'
+
+<Screen3>:
+    name: 'screen3'
+    Label:
+        text: 'Not today =)'
 
 <Messages>:
     id: messages

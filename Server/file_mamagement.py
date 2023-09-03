@@ -1,32 +1,45 @@
 from datetime import date
+from key_gen import Key
+from time import sleep
 
 class File:
     def __init__(self):
         self.end_str = '\n###END###\n'
         self.bound_str = '\n###\n'
+        self.keys = Key()
 
-    def send_today_messages(self, client_socket):
+    def send_today_messages(self,client_socket, public_key):
         self.title = date.today()
 
         try:
             f = open(f"./Messages/{str(self.title)}.txt", "rt")
-
             messages = f.read()
-            messages += self.end_str
+            messages_list = [item.strip() for item in messages.split(self.bound_str) if item.strip()]
 
-            client_socket.sendall(messages.encode('utf-8'))
+            for message in messages_list:
+                message_encr = self.keys.encrypt(message + self.bound_str, public_key)
+                message_encr += self.end_str
+
+                client_socket.sendall(message_encr.encode('utf-8'))
+                sleep(50e-3)
+                
             
         except:
             f = open(f"./Messages/{str(self.title)}.txt", "x")
-            client_socket.sendall(("None" + self.end_str).encode('utf-8'))
+            message = "None"
+            message_encr = self.keys.encrypt(message, public_key)
+            message_encr += self.end_str
+
+            client_socket.sendall(message_encr.encode('utf-8'))
         
         finally:
             f.close()
 
     def write_message(self, data):
-        f = open(f"./Messages/{str(self.title)}.txt", "a")
+        self.title = date.today()
+        f = open(f"./Messages/{str(self.title)}.txt", "at")
 
-        f.write(data[:-len(self.end_str)])
+        f.write(data)
         f.write(self.bound_str)
         f.close()
 
@@ -43,10 +56,9 @@ class File:
         return False
     
     def create_request(self, user_data):
-        f = open('./Users/requests.txt', 'a')
+        f = open('./Users/requests.txt', 'at')
 
         f.writelines([user_data + '\n'])
         f.close()
 
         print('new user')
-        raise ValueError('User does not have access yet')

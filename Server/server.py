@@ -2,7 +2,6 @@ import socket
 import select
 from file_mamagement import File
 from key_gen import Key
-import uuid
 
 class Server:
     def __init__(self):
@@ -19,6 +18,8 @@ class Server:
 
         self.file_mamagement = File()
         self.keys = Key()
+
+        self.socket_key = []
 
     def recv_all(self, socket):
         buff = ''
@@ -49,43 +50,65 @@ class Server:
 
                     print(f"Accepted connection from {client_address}")
 
-                    try:
-                        client_public_key = self.recv_all(client_socket)[:-len(self.file_mamagement.end_str)]
-                        self.keys.validate_key(client_public_key.encode('utf-8'))
-                        print(client_public_key)
+                    # try:
+                    client_public_key = self.recv_all(client_socket)[:-len(self.file_mamagement.end_str)]
+                    self.keys.validate_key(client_public_key.encode('utf-8'))
+                    print(client_public_key)
 
-                        server_public_key = self.keys.public_pem.decode('utf-8') + self.file_mamagement.end_str
-                        client_socket.sendall(server_public_key.encode('utf-8'))
-                        print(server_public_key)
+                    server_public_key = self.keys.public_pem.decode('utf-8') + self.file_mamagement.end_str
+                    client_socket.sendall(server_public_key.encode('utf-8'))
+                    print(server_public_key)
+
+                    # sleep(200e-3)
+                    client_encr_data = self.recv_all(client_socket)[:-len(self.file_mamagement.end_str)]
+                    client_data = self.keys.decrypt(client_encr_data)
+
+                    print(client_data)
+                    if self.file_mamagement.check_for_user(client_data):
+                        status = self.keys.encrypt("OK", client_public_key)
+                        self.socket_key.append({'socket': client_socket, 'key': client_public_key})
+                        client_socket.settimeout(None)
+                    else:
+                        self.file_mamagement.create_request(client_data)
+                        status = self.keys.encrypt("New User", client_public_key)
+                        
+                    print(status)
+                    status += self.file_mamagement.end_str
+                    client_socket.sendall(status.encode('utf-8'))
 
 
-                        client_encr_data = self.recv_all(client_socket)[:-len(self.file_mamagement.end_str)]
-                        client_data = self.keys.decrypt(client_encr_data)
-
-                        print(client_data)
-                        if not self.file_mamagement.check_for_user(client_data):
-                            self.file_mamagement.create_request(client_data)
-
-                        self.file_mamagement.send_today_messages(client_socket)
-
-                        self.socket_pool.append(client_socket)
-                    except:
-                        print('Tea pot detected =)))))))')
-                        client_socket.sendall("you're a tea pot =)".encode('utf-8'))
-                        client_socket.close()
+                    self.file_mamagement.send_today_messages(client_socket, client_public_key)
+                    self.socket_pool.append(client_socket)
+                    # except:
+                    #     print('Tea pot detected =)))))))')
+                    #     client_socket.sendall("you're a tea pot =)".encode('utf-8'))
+                    #     client_socket.close()
 
                 else:
                     data = self.recv_all(sock)
                     
                     if data:
+                        data_decr = self.keys.decrypt(data[:-len(self.file_mamagement.end_str)])
                         # Handle the received data
-                        print(f"Received data: {data}")
-                        self.file_mamagement.write_message(data)
+                        print(f"Received data: {data_decr}")
+                        self.file_mamagement.write_message(data_decr)
                         
                         for client in self.socket_pool[1:]:
-                            client.sendall(data.encode('utf-8'))
+                            for d in self.socket_key:
+                                if d['socket'] == sock:
+
+                                    key = d['key']
+                                    data_encr = self.keys.encrypt(data_decr, key)
+                                    data_encr+= self.file_mamagement.end_str
+
+                                    client.sendall(data_encr.encode('utf-8'))
+                                    break
                     else:
                         # No data received, the client has closed the connection
                         print(f"Connection from {sock.getpeername()} closed")
                         sock.close()
                         self.socket_pool.remove(sock)
+                        for d in self.socket_key:
+                            if d['socket'] == sock:
+                                self.socket_key.remove(d)
+                                break
