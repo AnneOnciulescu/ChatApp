@@ -8,12 +8,24 @@ ScreenManager:
     name: 'screen1'
     BoxLayout:
         orientation: 'vertical'
+        spacing: 5
+        Label:
+            text: 'Username:'
+            size_hint: (1, 0.1)
+        TextInput:
+            id: text_input_1
+            orientation: "vertical"
+
+            multiline: False
+            on_text_validate:
+            size_hint: (1, 0.15)
+
         Button:
-            text: 'User1'
+            text: 'Send'
             on_press: root.on_button_press(self)
-        Button:
-            text: 'User2'
-            on_press: root.on_button_press(self)
+            size_hint: (1, 0.15)
+        
+        NumericalKeyboard:
 
 <Screen2>:
     name: 'screen2'

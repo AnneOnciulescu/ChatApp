@@ -1,8 +1,10 @@
 from kivy.app import App
 from kivy.clock import Clock
 from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.gridlayout import GridLayout
 from kivy.uix.label import Label
 from kivy.uix.screenmanager import ScreenManager, Screen
+from kivy.uix.button import Button
 
 from MyDB import DBConnection
 
@@ -18,6 +20,38 @@ class Screen1(Screen):
 
         Clock.schedule_interval(lambda dt: my_app.messages.display_messages(my_app.db.get_new_messages()), 1)
 
+
+
+class NumericalKeyboard(GridLayout):
+    def __init__(self, **kwargs):
+        super(NumericalKeyboard, self).__init__(**kwargs)
+        self.cols = 3  # Set the number of columns in the GridLayout
+        self.spacing = 5
+
+        # Create buttons for numbers 1-9 and 0
+        for i in range(1, 10):
+            button = Button(text=str(i))
+            button.bind(on_release=self.on_button_click)
+            self.add_widget(button)
+
+        # Add a button for zero
+        delete_button = Button(text='Delete')
+        delete_button.bind(on_release=self.on_button_click)
+        self.add_widget(delete_button)
+
+        zero_button = Button(text='0')
+        zero_button.bind(on_release=self.on_button_click)
+        self.add_widget(zero_button)
+
+        send_button = Button(text='Send')
+        send_button.bind(on_release=self.on_button_click)
+        self.add_widget(send_button)
+
+
+    def on_button_click(self, instance):
+        # Handle button click here (you can customize this method)
+        print(f'Button {instance.text} clicked')
+    
 
 class Screen2(Screen):
     def __init__(self, **kwargs):
