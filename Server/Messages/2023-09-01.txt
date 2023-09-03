@@ -1,4 +1,0 @@
-{"user": "User1", "message": "mau mau", "timestamp": "2023-09-01 16:52:35.639590"}
-####
-{"user": "User1", "message": "am zis maaaaaaaau", "timestamp": "2023-09-01 16:52:43.598658"}
-####

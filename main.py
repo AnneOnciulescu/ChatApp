@@ -11,6 +11,8 @@ class Screen1(Screen):
         self.manager.current = 'screen2'
         username = widget.text
 
+        # todo: numerical keyboard enable
+
         my_app.db = db_init(username)
         # my_app.messages.display_messages(my_app.db.get_recent_messages())
 
