@@ -56,8 +56,6 @@ class Key:
             backend=default_backend()
         )
 
-        print("encr", public_key)
-
         ciphertext = public_key.encrypt(
             plaintext_data.encode(),
             padding.OAEP(
@@ -66,5 +64,5 @@ class Key:
                 label=None
             )
         )
-        print("fin")
+
         return base64.b64encode(ciphertext).decode('utf-8')

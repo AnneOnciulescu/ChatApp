@@ -41,7 +41,11 @@ class DBConnection:
         status = self.keys.decrypt(status_encr)
         print(status)
 
-        return status == 'OK'
+        if status != 'OK':
+            self.socket.close()
+            return False
+
+        return True
         
 
     def start_messages(self):

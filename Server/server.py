@@ -25,12 +25,13 @@ class Server:
         buff = ''
 
         while True:
-            data = socket.recv(1024).decode('utf-8')
+            data = socket.recv(1024)
 
             if not data:
                 print('connection closed')
                 break
 
+            data = data.decode('utf-8')
             buff += data
             if buff.endswith(self.file_mamagement.end_str):
                 return buff
@@ -50,7 +51,6 @@ class Server:
 
                     print(f"Accepted connection from {client_address}")
 
-                    # try:
                     client_public_key = self.recv_all(client_socket)[:-len(self.file_mamagement.end_str)]
                     self.keys.validate_key(client_public_key.encode('utf-8'))
                     print(client_public_key)
@@ -68,21 +68,20 @@ class Server:
                         status = self.keys.encrypt("OK", client_public_key)
                         self.socket_key.append({'socket': client_socket, 'key': client_public_key})
                         client_socket.settimeout(None)
+
+                        status += self.file_mamagement.end_str
+                        client_socket.sendall(status.encode('utf-8'))
+
+                        self.file_mamagement.send_today_messages(client_socket, client_public_key)
+                        self.socket_pool.append(client_socket)
+
                     else:
                         self.file_mamagement.create_request(client_data)
                         status = self.keys.encrypt("New User", client_public_key)
-                        
-                    print(status)
-                    status += self.file_mamagement.end_str
-                    client_socket.sendall(status.encode('utf-8'))
-
-
-                    self.file_mamagement.send_today_messages(client_socket, client_public_key)
-                    self.socket_pool.append(client_socket)
-                    # except:
-                    #     print('Tea pot detected =)))))))')
-                    #     client_socket.sendall("you're a tea pot =)".encode('utf-8'))
-                    #     client_socket.close()
+                        status += self.file_mamagement.end_str
+                        client_socket.sendall(status.encode('utf-8'))
+                        print('connection closed')
+                        client_socket.close()
 
                 else:
                     data = self.recv_all(sock)
@@ -104,8 +103,6 @@ class Server:
                                     client.sendall(data_encr.encode('utf-8'))
                                     break
                     else:
-                        # No data received, the client has closed the connection
-                        print(f"Connection from {sock.getpeername()} closed")
                         sock.close()
                         self.socket_pool.remove(sock)
                         for d in self.socket_key:

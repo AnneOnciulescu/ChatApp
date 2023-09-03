@@ -15,13 +15,14 @@ class File:
             f = open(f"./Messages/{str(self.title)}.txt", "rt")
             messages = f.read()
             messages_list = [item.strip() for item in messages.split(self.bound_str) if item.strip()]
+            # print(messages_list)
 
             for message in messages_list:
                 message_encr = self.keys.encrypt(message + self.bound_str, public_key)
                 message_encr += self.end_str
 
                 client_socket.sendall(message_encr.encode('utf-8'))
-                sleep(50e-3)
+                sleep(20e-3)
                 
             
         except:
