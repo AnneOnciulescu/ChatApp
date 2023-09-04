@@ -1,42 +1,370 @@
-{"user": "Robert_21", "message": "Acum merge", "timestamp": "2023-09-04 01:37:44.075327"}
+{"user": "meeweepuff", "message": "IM IN", "timestamp": "2023-09-04 18:37:04.518141"}
 ###
-{"user": "Robert_21", "message": "De ceeeeeeeeeeeeee", "timestamp": "2023-09-04 01:37:47.917350"}
+{"user": "Robert_21", "message": "ik", "timestamp": "2023-09-04 18:37:40.621769"}
 ###
-{"user": "Robert_21", "message": "AAAAAAAAAAAAAAAAAAAAAAAAAA", "timestamp": "2023-09-04 01:37:52.350819"}
+{"user": "Robert_21", "message": "le vedeam pe server", "timestamp": "2023-09-04 18:37:58.335392"}
 ###
-{"user": "Robert_21", "message": "NU ARE NICIUN SENS", "timestamp": "2023-09-04 01:37:58.951366"}
+{"user": "meeweepuff", "message": "mau?", "timestamp": "2023-09-04 18:37:59.686144"}
 ###
-{"user": "Robert_21", "message": "OF", "timestamp": "2023-09-04 01:38:02.120355"}
+{"user": "meeweepuff", "message": "mau?", "timestamp": "2023-09-04 18:38:04.081570"}
 ###
-{"user": "User2", "message": "OOOOOK", "timestamp": "2023-09-04 01:38:38.673597"}
+{"user": "meeweepuff", "message": "mau", "timestamp": "2023-09-04 18:38:18.333471"}
 ###
-{"user": "User2", "message": "merge", "timestamp": "2023-09-04 01:38:42.178854"}
+{"user": "meeweepuff", "message": "waaaa", "timestamp": "2023-09-04 18:38:23.212458"}
 ###
-{"user": "User2", "message": "dar nu inteleg de ce a murit mai devreme", "timestamp": "2023-09-04 01:38:52.004231"}
+{"user": "meeweepuff", "message": "te vad", "timestamp": "2023-09-04 18:38:26.187843"}
 ###
-{"user": "User2", "message": "chiar nu are sens", "timestamp": "2023-09-04 01:38:58.375458"}
+{"user": "meeweepuff", "message": "hello dear", "timestamp": "2023-09-04 18:39:20.031440"}
 ###
-{"user": "User2", "message": "pnm", "timestamp": "2023-09-04 01:39:01.657526"}
+{"user": "Robert_21", "message": "asa", "timestamp": "2023-09-04 18:39:34.757017"}
 ###
-{"user": "Robert_21", "message": "Uite ce draguta e", "timestamp": "2023-09-04 01:39:30.670272"}
+{"user": "Robert_21", "message": "am scos try ul", "timestamp": "2023-09-04 18:39:43.279180"}
 ###
-{"user": "Robert_21", "message": "Dar serios ca nu stiu care era problema", "timestamp": "2023-09-04 01:39:43.772027"}
+{"user": "Robert_21", "message": "iar", "timestamp": "2023-09-04 18:39:45.243012"}
 ###
-{"user": "Robert_21", "message": "=)))))))))))0", "timestamp": "2023-09-04 01:39:47.439026"}
+{"user": "Robert_21", "message": "si acum cred ca o sa mearga", "timestamp": "2023-09-04 18:40:22.957014"}
 ###
-{"user": "Robert_21", "message": "genial", "timestamp": "2023-09-04 01:39:49.785847"}
+{"user": "meeweepuff", "message": "cuvinte", "timestamp": "2023-09-04 18:40:32.807441"}
 ###
-{"user": "User2", "message": "Ba ce dracuuuuuuuu", "timestamp": "2023-09-04 01:40:14.149572"}
+{"user": "Robert_21", "message": "la mine inca merge", "timestamp": "2023-09-04 18:42:08.195656"}
 ###
-{"user": "User2", "message": "of", "timestamp": "2023-09-04 01:40:16.780425"}
+{"user": "meeweepuff", "message": "cuvinte altele?", "timestamp": "2023-09-04 18:42:18.086113"}
 ###
-{"user": "Robert_21", "message": "Asa te vreau", "timestamp": "2023-09-04 01:41:18.110639"}
+{"user": "meeweepuff", "message": "nu", "timestamp": "2023-09-04 18:42:20.471930"}
 ###
-{"user": "Robert_21", "message": "ca bag pl in tine", "timestamp": "2023-09-04 01:41:25.193324"}
+{"user": "meeweepuff", "message": "nu ma lasa sa vb", "timestamp": "2023-09-04 18:42:23.669332"}
 ###
-{"user": "User2", "message": "asa ba", "timestamp": "2023-09-04 02:07:12.468100"}
+{"user": "Robert_21", "message": "wtffff", "timestamp": "2023-09-04 18:42:24.963595"}
 ###
-{"user": "User2", "message": "baiat bun", "timestamp": "2023-09-04 02:07:17.503923"}
+{"user": "meeweepuff", "message": "mor", "timestamp": "2023-09-04 18:43:56.828999"}
 ###
-{"user": "User2", "message": "fmmmmmm", "timestamp": "2023-09-04 02:07:21.605864"}
+{"user": "meeweepuff", "message": "se trimit cu intarizere", "timestamp": "2023-09-04 18:44:01.362938"}
+###
+{"user": "meeweepuff", "message": "si gen prima tura", "timestamp": "2023-09-04 18:44:04.619299"}
+###
+{"user": "meeweepuff", "message": "imi zice ca nu se trimit", "timestamp": "2023-09-04 18:44:08.750553"}
+###
+{"user": "meeweepuff", "message": "da vad ca ele ajung in baza", "timestamp": "2023-09-04 18:44:13.621821"}
+###
+{"user": "meeweepuff", "message": "acum vezi ce scriu", "timestamp": "2023-09-04 18:44:47.534886"}
+###
+{"user": "meeweepuff", "message": "?", "timestamp": "2023-09-04 18:44:49.347684"}
+###
+{"user": "meeweepuff", "message": "eu vad ce scriu", "timestamp": "2023-09-04 18:44:55.638873"}
+###
+{"user": "meeweepuff", "message": "si inainte nu vedeam", "timestamp": "2023-09-04 18:44:59.183339"}
+###
+{"user": "meeweepuff", "message": ":))))", "timestamp": "2023-09-04 18:45:01.423739"}
+###
+{"user": "Robert_21", "message": "pfffffffffffff", "timestamp": "2023-09-04 18:45:12.996546"}
+###
+{"user": "meeweepuff", "message": "alo alo sunteti pe zona", "timestamp": "2023-09-04 18:48:10.477905"}
+###
+{"user": "meeweepuff", "message": "nu sunt eu pe zona", "timestamp": "2023-09-04 18:48:15.967418"}
+###
+{"user": "Robert_21", "message": "deci cand sunt singur merge?", "timestamp": "2023-09-04 18:52:03.116815"}
+###
+{"user": "Robert_21", "message": "ooook", "timestamp": "2023-09-04 18:52:07.271758"}
+###
+{"user": "Robert_21", "message": "asta e bine", "timestamp": "2023-09-04 18:52:11.475736"}
+###
+{"user": "Robert_21", "message": "dar nu are seeeeeeeeeens", "timestamp": "2023-09-04 18:52:18.943026"}
+###
+{"user": "Robert_21", "message": "pf", "timestamp": "2023-09-04 18:52:21.538139"}
+###
+{"user": "User2", "message": "oooook", "timestamp": "2023-09-04 18:52:49.815333"}
+###
+{"user": "Robert_21", "message": "mergi", "timestamp": "2023-09-04 18:53:01.589834"}
+###
+{"user": "User2", "message": "nu", "timestamp": "2023-09-04 18:53:12.208161"}
+###
+{"user": "User2", "message": "de ce asta mergeee", "timestamp": "2023-09-04 18:53:19.691749"}
+###
+{"user": "Robert_21", "message": "of", "timestamp": "2023-09-04 18:53:22.699320"}
+###
+{"user": "Robert_21", "message": "baaaaaaaaaaaa", "timestamp": "2023-09-04 18:53:26.982219"}
+###
+{"user": "Robert_21", "message": "aaaaaaaaaaaaaa", "timestamp": "2023-09-04 18:53:32.433993"}
+###
+{"user": "Robert_21", "message": "merge?", "timestamp": "2023-09-04 18:59:57.570847"}
+###
+{"user": "User2", "message": "mergeeeeeeeeee", "timestamp": "2023-09-04 19:00:03.883487"}
+###
+{"user": "Robert_21", "message": "Te iubesc", "timestamp": "2023-09-04 19:00:30.249647"}
+###
+{"user": "User2", "message": "Si eu te iubesc", "timestamp": "2023-09-04 19:00:37.322063"}
+###
+{"user": "meeweepuff", "message": "te iubeeeeesc", "timestamp": "2023-09-04 19:01:22.802897"}
+###
+{"user": "meeweepuff", "message": "<3", "timestamp": "2023-09-04 19:01:26.159978"}
+###
+{"user": "Robert_21", "message": "hehe", "timestamp": "2023-09-04 19:01:35.861279"}
+###
+{"user": "meeweepuff", "message": "hehehe", "timestamp": "2023-09-04 19:01:40.690195"}
+###
+{"user": "User2", "message": "Te iubim", "timestamp": "2023-09-04 19:01:41.016619"}
+###
+{"user": "meeweepuff", "message": "esti si user2 si robert tu", "timestamp": "2023-09-04 19:01:47.585190"}
+###
+{"user": "meeweepuff", "message": "domnule", "timestamp": "2023-09-04 19:01:51.754416"}
+###
+{"user": "meeweepuff", "message": "ia si gen", "timestamp": "2023-09-04 19:02:00.833590"}
+###
+{"user": "Robert_21", "message": "Eu sunt totul", "timestamp": "2023-09-04 19:02:00.895237"}
+###
+{"user": "meeweepuff", "message": "daca dau mai multe msj", "timestamp": "2023-09-04 19:02:04.711732"}
+###
+{"user": "User2", "message": "Si totul sunt eu", "timestamp": "2023-09-04 19:02:06.154896"}
+###
+{"user": "meeweepuff", "message": "pica?", "timestamp": "2023-09-04 19:02:06.903789"}
+###
+{"user": "meeweepuff", "message": "spam", "timestamp": "2023-09-04 19:02:16.373838"}
+###
+{"user": "Robert_21", "message": "nu pica", "timestamp": "2023-09-04 19:02:16.773133"}
+###
+{"user": "meeweepuff", "message": "warning", "timestamp": "2023-09-04 19:02:18.164014"}
+###
+{"user": "meeweepuff", "message": "stai ca fac testing", "timestamp": "2023-09-04 19:02:23.700683"}
+###
+{"user": "meeweepuff", "message": "..\\", "timestamp": "2023-09-04 19:02:25.985199"}
+###
+{"user": "meeweepuff", "message": "", "timestamp": "2023-09-04 19:02:26.728847"}
+###
+{"user": "meeweepuff", "message": ".", "timestamp": "2023-09-04 19:02:27.563178"}
+###
+{"user": "meeweepuff", "message": ".", "timestamp": "2023-09-04 19:02:28.195077"}
+###
+{"user": "meeweepuff", "message": ".", "timestamp": "2023-09-04 19:02:28.795151"}
+###
+{"user": "meeweepuff", "message": "/>", "timestamp": "2023-09-04 19:02:29.455421"}
+###
+{"user": "meeweepuff", "message": ".", "timestamp": "2023-09-04 19:02:30.172729"}
+###
+{"user": "meeweepuff", "message": "/.", "timestamp": "2023-09-04 19:02:30.943416"}
+###
+{"user": "meeweepuff", "message": "", "timestamp": "2023-09-04 19:02:31.213556"}
+###
+{"user": "meeweepuff", "message": "", "timestamp": "2023-09-04 19:02:31.417622"}
+###
+{"user": "meeweepuff", "message": ".", "timestamp": "2023-09-04 19:02:31.997820"}
+###
+{"user": "meeweepuff", "message": "f", "timestamp": "2023-09-04 19:02:32.658711"}
+###
+{"user": "meeweepuff", "message": "a", "timestamp": "2023-09-04 19:02:33.061999"}
+###
+{"user": "meeweepuff", "message": "f", "timestamp": "2023-09-04 19:02:33.496969"}
+###
+{"user": "meeweepuff", "message": "af/a", "timestamp": "2023-09-04 19:02:34.162120"}
+###
+{"user": "meeweepuff", "message": "fa", "timestamp": "2023-09-04 19:02:34.872582"}
+###
+{"user": "meeweepuff", "message": "w", "timestamp": "2023-09-04 19:02:35.204234"}
+###
+{"user": "meeweepuff", "message": "faf", "timestamp": "2023-09-04 19:02:35.770971"}
+###
+{"user": "meeweepuff", "message": "aw", "timestamp": "2023-09-04 19:02:36.356954"}
+###
+{"user": "meeweepuff", "message": "f", "timestamp": "2023-09-04 19:02:36.710603"}
+###
+{"user": "meeweepuff", "message": "", "timestamp": "2023-09-04 19:02:36.954717"}
+###
+{"user": "meeweepuff", "message": "fg", "timestamp": "2023-09-04 19:02:37.766815"}
+###
+{"user": "meeweepuff", "message": "g", "timestamp": "2023-09-04 19:02:38.421866"}
+###
+{"user": "meeweepuff", "message": "", "timestamp": "2023-09-04 19:02:38.653159"}
+###
+{"user": "meeweepuff", "message": "g", "timestamp": "2023-09-04 19:02:38.843785"}
+###
+{"user": "meeweepuff", "message": "g", "timestamp": "2023-09-04 19:02:39.047697"}
+###
+{"user": "meeweepuff", "message": "gg", "timestamp": "2023-09-04 19:02:39.241202"}
+###
+{"user": "meeweepuff", "message": "mergeeee", "timestamp": "2023-09-04 19:02:43.469830"}
+###
+{"user": "meeweepuff", "message": "nu pica", "timestamp": "2023-09-04 19:02:45.513013"}
+###
+{"user": "meeweepuff", "message": "momentaj", "timestamp": "2023-09-04 19:02:48.027852"}
+###
+{"user": "Robert_21", "message": "e bun al dreaq", "timestamp": "2023-09-04 19:02:52.313923"}
+###
+{"user": "meeweepuff", "message": "waaaa", "timestamp": "2023-09-04 19:02:53.220742"}
+###
+{"user": "meeweepuff", "message": "tu esti bun bre", "timestamp": "2023-09-04 19:02:59.667739"}
+###
+{"user": "User2", "message": "sunt curios daca acum imi merge si try ul", "timestamp": "2023-09-04 19:03:09.001173"}
+###
+{"user": "meeweepuff", "message": "mama iti vad msj si in termina;l", "timestamp": "2023-09-04 19:03:22.524340"}
+###
+{"user": "meeweepuff", "message": "waaaa", "timestamp": "2023-09-04 19:03:27.037326"}
+###
+{"user": "Robert_21", "message": "=))))))", "timestamp": "2023-09-04 19:03:31.523981"}
+###
+{"user": "meeweepuff", "message": "try to catch meeeee", "timestamp": "2023-09-04 19:03:33.376649"}
+###
+{"user": "meeweepuff", "message": "weeee", "timestamp": "2023-09-04 19:03:36.846510"}
+###
+{"user": "Robert_21", "message": "eu in server vad o intreaga magie", "timestamp": "2023-09-04 19:03:40.354066"}
+###
+{"user": "meeweepuff", "message": "show me", "timestamp": "2023-09-04 19:03:48.948354"}
+###
+{"user": "meeweepuff", "message": "blublublu scriu cuvinte", "timestamp": "2023-09-04 19:04:12.417409"}
+###
+{"user": "meeweepuff", "message": "si merge", "timestamp": "2023-09-04 19:04:13.927340"}
+###
+{"user": "meeweepuff", "message": "waaaa", "timestamp": "2023-09-04 19:04:15.243488"}
+###
+{"user": "meeweepuff", "message": "magieeeee", "timestamp": "2023-09-04 19:04:18.172931"}
+###
+{"user": "meeweepuff", "message": "tehnologieeee", "timestamp": "2023-09-04 19:04:23.324516"}
+###
+{"user": "meeweepuff", "message": "destept sv asta", "timestamp": "2023-09-04 19:05:16.173073"}
+###
+{"user": "meeweepuff", "message": "cripteaza decripteaza", "timestamp": "2023-09-04 19:05:24.710212"}
+###
+{"user": "meeweepuff", "message": "se da peste cap", "timestamp": "2023-09-04 19:05:27.807524"}
+###
+{"user": "meeweepuff", "message": "face tumbe", "timestamp": "2023-09-04 19:05:30.091340"}
+###
+{"user": "meeweepuff", "message": "si iti serveste msj", "timestamp": "2023-09-04 19:05:34.955227"}
+###
+{"user": "Robert_21", "message": "te iubesc", "timestamp": "2023-09-04 19:05:41.988475"}
+###
+{"user": "meeweepuff", "message": "te iubesc", "timestamp": "2023-09-04 19:05:46.771737"}
+###
+{"user": "meeweepuff", "message": "waaaa", "timestamp": "2023-09-04 19:05:50.726042"}
+###
+{"user": "meeweepuff", "message": "ne iubim", "timestamp": "2023-09-04 19:05:53.058108"}
+###
+{"user": "Robert_21", "message": "acum intelegi de ce fac spume", "timestamp": "2023-09-04 19:06:00.061784"}
+###
+{"user": "Robert_21", "message": "ca nu reusesc sa l fac app", "timestamp": "2023-09-04 19:06:06.855245"}
+###
+{"user": "Robert_21", "message": "pe tel", "timestamp": "2023-09-04 19:06:09.994311"}
+###
+{"user": "meeweepuff", "message": "da gen", "timestamp": "2023-09-04 19:06:14.549937"}
+###
+{"user": "meeweepuff", "message": "ce nu vrea", "timestamp": "2023-09-04 19:06:17.590776"}
+###
+{"user": "meeweepuff", "message": "da si mie ala de facut apk", "timestamp": "2023-09-04 19:06:24.881526"}
+###
+{"user": "Robert_21", "message": "pachetul de criptare", "timestamp": "2023-09-04 19:06:28.047227"}
+###
+{"user": "meeweepuff", "message": "ce nu vrea ", "timestamp": "2023-09-04 19:06:37.922142"}
+###
+{"user": "Robert_21", "message": "nu i place", "timestamp": "2023-09-04 19:06:39.068576"}
+###
+{"user": "meeweepuff", "message": "gen", "timestamp": "2023-09-04 19:06:42.813352"}
+###
+{"user": "meeweepuff", "message": "dc", "timestamp": "2023-09-04 19:06:44.338979"}
+###
+{"user": "meeweepuff", "message": "ce nu are", "timestamp": "2023-09-04 19:06:46.991464"}
+###
+{"user": "Robert_21", "message": "nu stiu", "timestamp": "2023-09-04 19:06:53.761903"}
+###
+{"user": "Robert_21", "message": "ca inainte mergea", "timestamp": "2023-09-04 19:06:58.913669"}
+###
+{"user": "Robert_21", "message": "in teorie", "timestamp": "2023-09-04 19:07:03.971406"}
+###
+{"user": "meeweepuff", "message": "zi mi cum il cheama sa l caut", "timestamp": "2023-09-04 19:07:09.138148"}
+###
+{"user": "Robert_21", "message": "acum e bulit iar", "timestamp": "2023-09-04 19:07:10.995294"}
+###
+{"user": "Robert_21", "message": "buildozer e cel cu care faci apk", "timestamp": "2023-09-04 19:07:24.727153"}
+###
+{"user": "Robert_21", "message": "cryptography e modulul de criptare", "timestamp": "2023-09-04 19:07:44.827977"}
+###
+{"user": "Robert_21", "message": "problema e ca nu prea le a facut nimeni sa mearga", "timestamp": "2023-09-04 19:08:08.637981"}
+###
+{"user": "Robert_21", "message": "pe varianta noua", "timestamp": "2023-09-04 19:08:14.100448"}
+###
+{"user": "Robert_21", "message": "vezi ca e un fisier buildozer.spec", "timestamp": "2023-09-04 19:08:58.431971"}
+###
+{"user": "Robert_21", "message": "ala se creeaza cand dai buildozer init", "timestamp": "2023-09-04 19:09:08.087664"}
+###
+{"user": "Robert_21", "message": "tu nu tre sa mai dai ca e bun fisierul", "timestamp": "2023-09-04 19:09:19.528698"}
+###
+{"user": "Robert_21", "message": "si ai undeva in el requirements", "timestamp": "2023-09-04 19:09:52.562106"}
+###
+{"user": "Robert_21", "message": "si acolo sunt niste pachete insirate", "timestamp": "2023-09-04 19:10:10.368302"}
+###
+{"user": "Robert_21", "message": "daca scoti cryptography face apk ul dar crapa la runtime cu mesaj ca nu il cunoaste", "timestamp": "2023-09-04 19:10:39.204601"}
+###
+{"user": "Robert_21", "message": "Up again", "timestamp": "2023-09-04 19:19:10.115736"}
+###
+{"user": "meeweepuff", "message": "test timeeeeeeee", "timestamp": "2023-09-04 19:20:30.567293"}
+###
+{"user": "Robert_21", "message": "alaaa eee", "timestamp": "2023-09-04 19:20:34.829245"}
+###
+{"user": "Robert_21", "message": "facusem o prostie cand trimiteam datele inapoi la useri", "timestamp": "2023-09-04 19:21:16.772072"}
+###
+{"user": "meeweepuff", "message": "uita te pe insta", "timestamp": "2023-09-04 19:21:23.586294"}
+###
+{"user": "meeweepuff", "message": "plng", "timestamp": "2023-09-04 19:21:25.505742"}
+###
+{"user": "meeweepuff", "message": "ce prostie?", "timestamp": "2023-09-04 19:21:38.047811"}
+###
+{"user": "Robert_21", "message": "nu criptam cu cheia care trebuie", "timestamp": "2023-09-04 19:22:01.177786"}
+###
+{"user": "meeweepuff", "message": "bulina e numai in app", "timestamp": "2023-09-04 19:22:13.032166"}
+###
+{"user": "Robert_21", "message": "si nici nu trimiteam pe socket ul care trebuie", "timestamp": "2023-09-04 19:22:13.220346"}
+###
+{"user": "meeweepuff", "message": "nu intleg", "timestamp": "2023-09-04 19:22:16.002081"}
+###
+{"user": "Robert_21", "message": "eu nu am bulinuta", "timestamp": "2023-09-04 19:22:25.363706"}
+###
+{"user": "meeweepuff", "message": "a gen ai 2 sock?", "timestamp": "2023-09-04 19:22:27.883727"}
+###
+{"user": "Robert_21", "message": "nu stiu care e faza", "timestamp": "2023-09-04 19:22:30.925663"}
+###
+{"user": "meeweepuff", "message": "bug :)))", "timestamp": "2023-09-04 19:22:36.668814"}
+###
+{"user": "Robert_21", "message": "pl", "timestamp": "2023-09-04 19:22:52.414512"}
+###
+{"user": "meeweepuff", "message": "si gen daca lasi sv deschis", "timestamp": "2023-09-04 19:22:59.762574"}
+###
+{"user": "Robert_21", "message": "m am saturat de buguri", "timestamp": "2023-09-04 19:23:02.771459"}
+###
+{"user": "meeweepuff", "message": "isi ia timeout?", "timestamp": "2023-09-04 19:23:05.250884"}
+###
+{"user": "Robert_21", "message": "nu cred ca are cum", "timestamp": "2023-09-04 19:23:17.335891"}
+###
+{"user": "meeweepuff", "message": "idk am intrebat", "timestamp": "2023-09-04 19:23:25.585775"}
+###
+{"user": "meeweepuff", "message": "testam", "timestamp": "2023-09-04 19:23:30.178544"}
+###
+{"user": "Robert_21", "message": "gen sa i dea linuxu kill?", "timestamp": "2023-09-04 19:23:41.143872"}
+###
+{"user": "meeweepuff", "message": "da intr un fel", "timestamp": "2023-09-04 19:23:56.713234"}
+###
+{"user": "Robert_21", "message": "nu am matit", "timestamp": "2023-09-04 19:24:05.312637"}
+###
+{"user": "meeweepuff", "message": "linuxu sau orice altcv implicat in proces", "timestamp": "2023-09-04 19:24:05.774310"}
+###
+{"user": "Robert_21", "message": "l am tinut maxim jum de ora", "timestamp": "2023-09-04 19:24:20.439158"}
+###
+{"user": "Robert_21", "message": "idk", "timestamp": "2023-09-04 19:24:23.294100"}
+###
+{"user": "meeweepuff", "message": "stai ca vr sa testez cv", "timestamp": "2023-09-04 19:24:27.393115"}
+###
+{"user": "meeweepuff", "message": "", "timestamp": "2023-09-04 19:24:27.617989"}
+###
+{"user": "Robert_21", "message": "te bate parola bre?", "timestamp": "2023-09-04 19:25:08.295664"}
+###
+{"user": "Robert_21", "message": "=))))))))))", "timestamp": "2023-09-04 19:25:29.825325"}
+###
+{"user": "meeweepuff", "message": "ce te iei de mn", "timestamp": "2023-09-04 19:25:36.625751"}
+###
+{"user": "meeweepuff", "message": "vr poza cu ", "timestamp": "2023-09-04 19:25:39.727726"}
+###
+{"user": "meeweepuff", "message": "atunci cand apare user", "timestamp": "2023-09-04 19:25:44.757368"}
+###
+{"user": "meeweepuff", "message": "care nu e", "timestamp": "2023-09-04 19:25:46.614519"}
+###
+{"user": "meeweepuff", "message": "si de unde stii ca ma bate parola", "timestamp": "2023-09-04 19:25:56.930619"}
+###
+{"user": "meeweepuff", "message": ":)))))))))", "timestamp": "2023-09-04 19:25:59.774046"}
+###
+{"user": "Robert_21", "message": "eu stiu tot", "timestamp": "2023-09-04 19:26:41.307068"}
 ###

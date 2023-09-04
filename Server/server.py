@@ -47,41 +47,47 @@ class Server:
 
                     client_socket, client_address = self.server.accept()
                     client_socket.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1)
-                    client_socket.settimeout(1)
+                    client_socket.settimeout(2)
 
                     print(f"Accepted connection from {client_address}")
 
-                    client_public_key = self.recv_all(client_socket)[:-len(self.file_mamagement.end_str)]
-                    self.keys.validate_key(client_public_key.encode('utf-8'))
-                    print(client_public_key)
+                    try:
+                        client_public_key = self.recv_all(client_socket)[:-len(self.file_mamagement.end_str)]
+                        self.keys.validate_key(client_public_key.encode('utf-8'))
+                        print(client_public_key)
 
-                    server_public_key = self.keys.public_pem.decode('utf-8') + self.file_mamagement.end_str
-                    client_socket.sendall(server_public_key.encode('utf-8'))
-                    print(server_public_key)
+                        server_public_key = self.keys.public_pem.decode('utf-8') + self.file_mamagement.end_str
+                        client_socket.sendall(server_public_key.encode('utf-8'))
+                        print(server_public_key)
 
-                    # sleep(200e-3)
-                    client_encr_data = self.recv_all(client_socket)[:-len(self.file_mamagement.end_str)]
-                    client_data = self.keys.decrypt(client_encr_data)
+                        # sleep(200e-3)
+                        client_encr_data = self.recv_all(client_socket)[:-len(self.file_mamagement.end_str)]
+                        client_data = self.keys.decrypt(client_encr_data)
 
-                    print(client_data)
-                    if self.file_mamagement.check_for_user(client_data):
-                        status = self.keys.encrypt("OK", client_public_key)
-                        self.socket_key.append({'socket': client_socket, 'key': client_public_key})
-                        client_socket.settimeout(None)
+                        print(client_data)
+                        if self.file_mamagement.check_for_user(client_data):
+                            client_socket.settimeout(None)
+                            
+                            status = self.keys.encrypt("OK", client_public_key)
+                            self.socket_key.append({'socket': client_socket, 'key': client_public_key})
 
-                        status += self.file_mamagement.end_str
-                        client_socket.sendall(status.encode('utf-8'))
+                            status += self.file_mamagement.end_str
+                            client_socket.sendall(status.encode('utf-8'))
 
-                        self.file_mamagement.send_today_messages(client_socket, client_public_key)
-                        self.socket_pool.append(client_socket)
+                            self.file_mamagement.send_today_messages(client_socket, client_public_key)
+                            self.socket_pool.append(client_socket)
 
-                    else:
-                        self.file_mamagement.create_request(client_data)
-                        status = self.keys.encrypt("New User", client_public_key)
-                        status += self.file_mamagement.end_str
-                        client_socket.sendall(status.encode('utf-8'))
-                        print('connection closed')
+                        else:
+                            self.file_mamagement.create_request(client_data)
+                            status = self.keys.encrypt("New User", client_public_key)
+                            status += self.file_mamagement.end_str
+                            client_socket.sendall(status.encode('utf-8'))
+                            print('connection closed')
+                            client_socket.close()
+                    except:
+                        print('ciupalezuuuuu')
                         client_socket.close()
+
 
                 else:
                     data = self.recv_all(sock)
@@ -92,16 +98,17 @@ class Server:
                         print(f"Received data: {data_decr}")
                         self.file_mamagement.write_message(data_decr)
                         
-                        for client in self.socket_pool[1:]:
-                            for d in self.socket_key:
-                                if d['socket'] == sock:
 
-                                    key = d['key']
-                                    data_encr = self.keys.encrypt(data_decr, key)
-                                    data_encr+= self.file_mamagement.end_str
+                        for d in self.socket_key:
+                            if d['socket'] != self.server:
 
-                                    client.sendall(data_encr.encode('utf-8'))
-                                    break
+                                key = d['key']
+                                client = d['socket']
+                                data_encr = self.keys.encrypt(data_decr, key)
+                                data_encr += self.file_mamagement.end_str
+
+                                client.sendall(data_encr.encode('utf-8'))
+
                     else:
                         sock.close()
                         self.socket_pool.remove(sock)
